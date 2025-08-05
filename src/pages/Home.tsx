@@ -4,6 +4,11 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Link } from "react-router-dom";
+import { useInView } from "framer-motion";
+import CountUp from "react-countup";
+import { useRef } from "react";
+import StatsSection from "@/components/StatsSection";
+
 
 const integrationLogos= [
   "https://i.pinimg.com/1200x/73/0b/95/730b955fb6084375384a1d43c5eb2469.jpg", 
@@ -92,14 +97,8 @@ const Home = () => {
               </CardContent>
             </Card>
           </div>
-
-          <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-lg p-8 text-white text-center">
-            <div className="max-w-md mx-auto">
-              <h3 className="text-2xl font-bold mb-2">25%</h3>
-              <p className="text-sm">
-                Increase in team productivity when switching to SafariDesk - get started today
-              </p>
-            </div>
+          <div>
+            <StatsSection/>
           </div>
         </div>
       </section>
@@ -299,3 +298,4 @@ const Home = () => {
 };
 
 export default Home;
+
