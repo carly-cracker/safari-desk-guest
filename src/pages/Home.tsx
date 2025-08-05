@@ -5,6 +5,17 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Link } from "react-router-dom";
 
+const integrationLogos= [
+  "https://i.pinimg.com/1200x/73/0b/95/730b955fb6084375384a1d43c5eb2469.jpg", 
+  "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
+  "https://cdn-icons-png.flaticon.com/512/906/906324.png", 
+  "https://cdn-icons-png.flaticon.com/512/906/906309.png",
+  "https://cdn-icons-png.flaticon.com/512/733/733553.png",
+  "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+  "https://cdn-icons-png.flaticon.com/512/888/888846.png",
+  "https://cdn-icons-png.flaticon.com/512/5968/5968853.png",
+]
+
 const Home = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -13,17 +24,17 @@ const Home = () => {
       {/* Hero Section */}
       <section className="py-20 px-4 text-center bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto max-w-4xl">
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="secondary" className="mb-4 animate-fade-in-up">
             Get Started
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up delay-100">
             Your go-to productivity powerhouse for remote team
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
             Streamline your workflow, manage projects, and empower your team with 
             SafariDesk the all-in-one task management solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
             <Button size="lg" asChild>
               <Link to="/signup">Start free</Link>
             </Button>
@@ -180,9 +191,13 @@ const Home = () => {
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-12">
-            {Array.from({ length: 16 }, (_, i) => (
-              <div key={i} className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
-                <div className="w-6 h-6 bg-primary/20 rounded"></div>
+            {integrationLogos.map((logo, index) => (
+              <div key={index} className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                <img
+                  src={logo}
+                  alt={`Integration logo ${index + 1}`}
+                  className="w-6 h-6 object-contain"
+                />
               </div>
             ))}
           </div>

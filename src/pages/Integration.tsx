@@ -17,7 +17,7 @@ const Integration = () => {
       category: "Communication",
       rating: 4.9,
       reviews: 2150,
-      logo: "/api/placeholder/60/60",
+      logo: "https://i.pinimg.com/1200x/73/0b/95/730b955fb6084375384a1d43c5eb2469.jpg",
       featured: true,
       popular: true
     },
