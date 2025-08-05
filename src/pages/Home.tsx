@@ -25,14 +25,14 @@ const Home = () => {
       <section className="py-20 px-4 text-center bg-gradient-to-b from-background to-muted/20">
         <div className="container mx-auto max-w-4xl">
           <Badge variant="secondary" className="mb-4 animate-fade-in-up">
-            Get Started
+            Get Started with  <span className="text-green-600 font-bold">  SafariDesk</span>
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up delay-100">
-            Your go-to productivity powerhouse for remote team
+            Your complete customer support helpdesk solution
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
-            Streamline your workflow, manage projects, and empower your team with 
-            SafariDesk the all-in-one task management solution.
+            Streamline your workflow, manage projects, and empower your team with  
+            <span className="text-green-600 font-bold border-b-2 border-green-500 pb-1"> SafariDesk</span> the all-in-one task management solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
             <Button size="lg" asChild>
@@ -49,25 +49,46 @@ const Home = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">What makes us unique</h2>
+            <h2 className="text-3xl font-bold mb-4 animate-bounce-in">What makes us unique</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <Card className="p-6">
+            <Card className="p-6 animate-fade-in-up delay-100">
               <CardContent className="p-0">
                 <h3 className="font-semibold mb-2">Team collaboration</h3>
                 <p className="text-muted-foreground text-sm">
                   Real-time collaboration features to keep your team in sync and productive.
                 </p>
+                <img src="https://i.pinimg.com/1200x/6c/24/f4/6c24f4c7a181d856854a05da1fddefd0.jpg" alt="team colab" />
               </CardContent>
             </Card>
             
-            <Card className="p-6">
+            <Card className="p-6 animate-fade-in-up delay-300">
               <CardContent className="p-0">
                 <h3 className="font-semibold mb-2">Seamless integrations</h3>
                 <p className="text-muted-foreground text-sm">
                   Connect with your favorite tools and streamline your workflow effortlessly.
                 </p>
+                <img src="https://i.pinimg.com/736x/b7/87/2b/b7872bc1dd099010e6f385aac74a822c.jpg" alt="integrations" />
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 animate-fade-in-up animate-bounce-in delay-300">
+              <CardContent className="p-0">
+                <h3 className="font-semibold mb-2">SLA Management</h3>
+                <p className="text-muted-foreground text-sm">
+                  Set and monitor service level agreements with automated escalations,compliance tracking and perfomance metrics to ensure timely reslutions 
+                </p>
+                <img src="https://i.pinimg.com/1200x/a5/02/ee/a502ee949d7cf4d2efaae84189e38232.jpg" alt="integrations" />
+              </CardContent>
+            </Card>
+            <Card className="p-6 animate-fade-in-up animate-bounce-in delay-300">
+              <CardContent className="p-0">
+                <h3 className="font-semibold mb-">Knolwedge Base</h3>
+                <p className="text-muted-foreground text-sm">
+                  Build comprehensive knowledge bases with AI powered article suggestions, self sercice portals and searchable documentations for faster resolutions
+                </p>
+                <img src="https://i.pinimg.com/736x/12/25/b0/1225b038e1185de4e739b9905710b2fc.jpg" alt="integrations" />
               </CardContent>
             </Card>
           </div>

@@ -11,7 +11,7 @@ const Login = () => {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">S</span>
+              <img src="public/grn-01.png" alt="" />
             </div>
             <span className="font-semibold text-xl">SafariDesk</span>
           </div>
