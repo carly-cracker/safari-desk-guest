@@ -7,6 +7,18 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Features from "./pages/Features";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import BlogDetails from "./pages/BlogDetails";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Integration from "./pages/Integration";
+import IntegrationDetails from "./pages/IntegrationDetails";
+import CaseStudy from "./pages/CaseStudy";
+import CaseStudyDetails from "./pages/CaseStudyDetails";
+import RequestDemo from "./pages/RequestDemo";
+import Changelog from "./pages/Changelog";
 import Pricing from "./pages/Pricing";
 import About from "./pages/About";
 
@@ -24,6 +36,18 @@ const App = () => (
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
+          <Route path="/integration" element={<Integration />} />
+          <Route path="/integration/:id" element={<IntegrationDetails />} />
+          <Route path="/case-study" element={<CaseStudy />} />
+          <Route path="/case-study/:id" element={<CaseStudyDetails />} />
+          <Route path="/demo" element={<RequestDemo />} />
+          <Route path="/changelog" element={<Changelog />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
