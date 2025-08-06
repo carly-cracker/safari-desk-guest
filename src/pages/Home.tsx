@@ -388,7 +388,7 @@ const Home = () => {
             From communication platforms to file storage solutions, we've got you covered.
           </p>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 mb-12 animate-bounce">
             {integrationLogos.map((logo, index) => (
               <div key={index} className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
                 <img
