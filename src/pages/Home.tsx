@@ -131,6 +131,22 @@ const Home = () => {
               Learn more
             </Button>
           </div>
+          <div>
+              <h4 className="mt-10 font-roboto font-bold text-purple-900">Let us walk you through.</h4>
+            </div>
+          <div className="mt-12 flex justify-center animate-fade-in-up delay-400">
+            <div className="w-full max-w-3xl aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+              src="https://player.cloudinary.com/embed/?cloud_name=dir0qfbpu&public_id=intro-video_ny0gzx&profile=cld-default"
+              width="640"
+              height="360" 
+              style={{ height: 'auto', width: '100%', aspectRatio: '640 / 360' }}
+              allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              allowFullScreen
+              frameBorder="0"
+            ></iframe>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -197,7 +213,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Your essential productivity toolkit */}
+      {/* Features */}
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
           <div>
@@ -219,7 +235,7 @@ const Home = () => {
                   <li>Custom ticket fields and forms for different departments.</li>
                   <li>Ticket merging and splitting for complex issues.</li>
                 </ul>
-                <Button size="sm" className="mt-4">Learn More</Button>
+                <Button size="sm" className="mt-4"><Link to='/features'>Learn more</Link></Button>
               </CardContent>
             </Card>
             
@@ -234,7 +250,7 @@ const Home = () => {
                   <li>Business hours and holiday calendar integration.</li>
                   <li>SLA pause during customer response periods.</li>
                 </ul>
-                <Button size="sm" className="mt-4">Learn More</Button>
+                <Button size="sm" className="mt-4"><Link to='/features'>Learn more</Link></Button>
               </CardContent>
             </Card>
             
@@ -250,7 +266,7 @@ const Home = () => {
                   <li>Customer self-service portal.</li>
                   <li>Article approval workflows.</li>
                 </ul>
-                <Button size="sm" className="mt-4">Learn More</Button>
+                <Button size="sm" className="mt-4"><Link to='/features'>Learn more</Link></Button>
               </CardContent>
             </Card>
           </div>
@@ -286,7 +302,7 @@ const Home = () => {
               className="flex justify-center"
             >
               <img
-                src="public/analyticdash.png"
+                src="https://res-console.cloudinary.com/dir0qfbpu/thumbnails/v1/image/upload/v1754487834/YW5hbHl0aWNkYXNoX29nbmZkaA==/drilldown"
                 alt="Analytics Dashboard"
                 className="rounded-lg shadow-lg w-full max-w-md object-cover"
               />

@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-            <img src="public/grn-01.png" alt="" />
+            <img src="https://res-console.cloudinary.com/dir0qfbpu/thumbnails/v1/image/upload/v1754487823/Z3JuLTAxX2ZrZnRsYw==/drilldown" alt="" />
           </div>
           <span className="font-semibold text-xl">SafariDesk</span>
         </Link>

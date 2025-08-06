@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">S</span>
+                <img src="https://res-console.cloudinary.com/dir0qfbpu/thumbnails/v1/image/upload/v1754487823/Z3JuLTAxX2ZrZnRsYw==/drilldown" alt="" />
               </div>
               <span className="font-semibold text-xl">SafariDesk</span>
             </div>
