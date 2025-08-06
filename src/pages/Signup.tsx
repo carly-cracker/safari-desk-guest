@@ -20,7 +20,7 @@ const Signup = () => {
         <Card>
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Create your account</CardTitle>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground font-roboto">
               Join thousands of teams already using SafariDesk
             </p>
           </CardHeader>

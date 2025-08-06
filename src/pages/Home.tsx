@@ -13,6 +13,25 @@ interface FAQ {
   answer: string;
 }
 
+const companyLogos = [
+  {
+    name: "Webflow",
+    logo: "https://i.pinimg.com/1200x/a8/85/26/a885267a0e9f0cc602aafb85069fe763.jpg",
+  },
+  {
+    name: "Dropbox",
+    logo: "https://cdn.worldvectorlogo.com/logos/dropbox-3.svg",
+  },
+  {
+    name: "Notion",
+    logo: "https://i.pinimg.com/1200x/7e/29/aa/7e29aa431b6dd2f3c1502b85d3ddc28e.jpg",
+  },
+  {
+    name: "Zapier",
+    logo: "https://cdn.worldvectorlogo.com/logos/zapier-2.svg",
+  },
+];
+
 const faqs: FAQ[] = [
     {
       question: "Why SafariDesk?",
@@ -118,11 +137,14 @@ const Home = () => {
       {/* What makes us unique */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
+          <div>
+            <h4 className="text-center text-orange-400 text-2xl font-bold mb-4 font-pacifico">Why Choose Us!</h4>
+          </div>
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 animate-bounce-in">What makes us unique</h2>
+            <h2 className="text-3xl font-bold mb-4 animate-bounce-in">What makes SafariDesk unique</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             <Card className="p-6 animate-fade-in-up delay-100">
               <CardContent className="p-0">
                 <h3 className="font-semibold mb-2">Team collaboration</h3>
@@ -178,6 +200,9 @@ const Home = () => {
       {/* Your essential productivity toolkit */}
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
+          <div>
+            <h4 className="text-center text-orange-400 text-2xl font-bold mb-4 font-pacifico">Features !</h4>
+          </div>
           <div className="text-center mb-5">
             <h2 className="text-3xl font-bold mb-4">Powerful Features To boost your work flow!</h2>
             <p className="text-muted-foreground">These include asset management, customer portal task management, CSAT surveys, role-based access, status page, third party intergrations, SSO, multi lingual suport and many more</p>
@@ -236,21 +261,46 @@ const Home = () => {
       {/* Complete view of your team's progress */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="bg-yellow-200 rounded-lg p-8">
-            <h2 className="text-3xl font-bold mb-4">Complete view of your team's progress</h2>
-            <p className="text-muted-foreground mb-6">A personalized workspace</p>
-            <p className="text-sm text-muted-foreground mb-8">
-              Get a bird's eye view of all your projects, track progress, and make data-driven decisions 
-              with comprehensive analytics and reporting tools.
-            </p>
+          <div>
+            <h4 className="text-center text-orange-400 text-2xl font-bold mb-4 font-pacifico">Analytics !</h4>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-green-50 rounded-lg p-8">
+            
+            {/* Left Side - Text */}
+            <div>
+              <h2 className="text-3xl font-bold mb-4">
+                Advanced analytics tools to keep you in control & customizable
+              </h2>
+              <p className="text-sm text-muted-foreground mb-8">
+                Go beyond raw numbers with a fully customizable analytics dashboard 
+                that puts you in control. Effortlessly track agent performance, ticket trends 
+                and customer satisfaction to drive impactful improvements and tell support success stories.
+              </p>
+            </div>
+            
+            {/* Right Side - Animated Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex justify-center"
+            >
+              <img
+                src="public/analyticdash.png"
+                alt="Analytics Dashboard"
+                className="rounded-lg shadow-lg w-full max-w-md object-cover"
+              />
+            </motion.div>
+
           </div>
         </div>
       </section>
 
+
       {/* What our users say */}
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4">What our users say</h2>
             <p className="text-muted-foreground">
               See what people are saying about SafariDesk
@@ -288,11 +338,23 @@ const Home = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-2xl font-bold mb-8">Trusted by leading companies</h2>
-          <div className="flex justify-center items-center space-x-8 opacity-60">
-            <span className="text-lg font-semibold">Webflow</span>
-            <span className="text-lg font-semibold">Dropbox</span>
-            <span className="text-lg font-semibold">Notion</span>
-            <span className="text-lg font-semibold">Zapier</span>
+
+          <div className="flex justify-center items-center space-x-12">
+            {companyLogos.map((company, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="w-20 h-20 flex items-center justify-center"
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className="w-full h-full object-contain"
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -300,6 +362,9 @@ const Home = () => {
       {/* SafariDesk Integrations */}
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto text-center">
+          <div>
+            <h4 className="text-center text-orange-400 text-2xl font-bold mb-4 font-pacifico">Intergratios !</h4>
+          </div>
           <h2 className="text-3xl font-bold mb-4">SafariDesk Integrations</h2>
           <p className="text-muted-foreground mb-8">Connect to Your Favorite Tools</p>
           <p className="text-sm text-muted-foreground max-w-2xl mx-auto mb-12">
@@ -324,6 +389,9 @@ const Home = () => {
       {/* FAQ */}
       <section className="py-20 px-4">
       <div className="container mx-auto max-w-2xl">
+        <div>
+            <h4 className="text-center text-orange-400 text-2xl font-bold mb-4 font-pacifico">FAQs !</h4>
+          </div>
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
           <p className="text-gray-500">

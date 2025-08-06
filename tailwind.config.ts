@@ -18,6 +18,13 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				poppins: ['Poppins', 'sans-serif'],
+				nunito: ['Nunito', 'sans-serif'],
+				varela: ['Varela Round', 'sans-serif'],
+				roboto: ['Roboto', 'sans-serif'],
+				pacifico: ['Pacifico', 'cursive'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
