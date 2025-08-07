@@ -181,7 +181,7 @@ const Home = () => {
               </CardContent>
             </Card>
           </div>
-          <Card className="w-full flex flex-col md:flex-row items-center md:items-stretch p-6 animate-fade-in-up animate-bounce-in delay-300">
+          <Card className="w-full flex flex-col md:flex-row items-center md:items-stretch p-6 animate-fade-in-up delay-300">
             <CardContent className="w-full md:w-1/2 flex flex-col justify-center md:pr-6">
               <h3 className="font-semibold mb-2 text-xl">SLA Management</h3>
               <p className="text-muted-foreground text-sm">
@@ -239,7 +239,7 @@ const Home = () => {
               </CardContent>
             </Card>
             
-            <Card className="p-6 bg-yellow-100 animate-bounce-in">
+            <Card className="p-6 bg-yellow-100 animate-bounce-in delay-100">
               <CardContent className="p-0">
                 <h3 className="font-semibold mb-2">SLA Mnanagement</h3>
                 <p>
@@ -254,7 +254,7 @@ const Home = () => {
               </CardContent>
             </Card>
             
-            <Card className="p-6 bg-green-100 animate-bounce-in">
+            <Card className="p-6 bg-green-100 animate-bounce-in delay-200">
               <CardContent className="p-0">
                 <h3 className="font-semibold mb-2">Knowledge Management</h3>
                 <p>

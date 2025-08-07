@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Menu, ChevronDown } from "lucide-react";
 
 const Header = () => {
   const location = useLocation();
@@ -41,14 +48,40 @@ const Header = () => {
           >
             Pricing
           </Link>
-          <Link 
-            to="/blog" 
-            className={`text-sm font-medium transition-colors hover:text-primary ${
-              isActive('/blog') ? 'text-primary' : 'text-muted-foreground'
-            }`}
-          >
-            Blog
-          </Link>
+          <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className={`px-4 py-2 rounded-xl text-sm font-medium flex items-center space-x-1 transition-all duration-300 hover:scale-105 ${
+                  isActive("/blog") || isActive("/case-study") || isActive("/integration") || isActive("/changelog")
+                    ? "bg-white/40 text-blue-700 shadow-lg backdrop-blur-sm"
+                    : "text-gray-700 hover:bg-white/30 hover:text-gray-900 hover:backdrop-blur-sm"
+                }`}>
+                  <span>Resources</span>
+                  <ChevronDown className="h-3 w-3" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="center" className="w-52 bg-white/90 backdrop-blur-xl border border-white/30 shadow-2xl rounded-2xl p-2 mt-2">
+                <DropdownMenuItem asChild>
+                  <Link to="/blog" className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-white/50 rounded-xl transition-all duration-200">
+                    📝 Blog
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/case-study" className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-white/50 rounded-xl transition-all duration-200">
+                    📊 Case Studies
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/integration" className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-white/50 rounded-xl transition-all duration-200">
+                    🔗 Integrations
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/changelog" className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-white/50 rounded-xl transition-all duration-200">
+                    🆕 What's New
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           <Link 
             to="/contact" 
             className={`text-sm font-medium transition-colors hover:text-primary ${
