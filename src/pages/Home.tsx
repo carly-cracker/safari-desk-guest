@@ -303,7 +303,7 @@ const Home = () => {
               className="flex justify-center"
             >
               <img
-                src="https://res-console.cloudinary.com/dir0qfbpu/thumbnails/v1/image/upload/v1754487834/YW5hbHl0aWNkYXNoX29nbmZkaA==/drilldown"
+                src="https://i.ibb.co/90YW0Hb/analyticdash.png"
                 alt="Analytics Dashboard"
                 className="rounded-lg shadow-lg w-full max-w-md object-cover"
               />

@@ -28,7 +28,7 @@ const Header = () => {
           {/* Logo - macOS Monterey style */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-8 h-8 bg-gradient-to-br from-white-500 to-white-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-              <img src="https://res-console.cloudinary.com/dir0qfbpu/thumbnails/v1/image/upload/v1754487823/Z3JuLTAxX2ZrZnRsYw==/drilldown" alt="" />
+              <img src="https://i.ibb.co/WNL0yvvz/grn-01.png" alt="" />
             </div>
             <span className="font-semibold text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
               SafariDesk

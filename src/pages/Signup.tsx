@@ -11,7 +11,7 @@ const Signup = () => {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <img src="https://res-console.cloudinary.com/dir0qfbpu/thumbnails/v1/image/upload/v1754487823/Z3JuLTAxX2ZrZnRsYw==/drilldown" alt="" />
+              <img src="https://i.ibb.co/WNL0yvvz/grn-01.png" alt="" />
             </div>
             <span className="font-semibold text-xl">SafariDesk</span>
           </div>
