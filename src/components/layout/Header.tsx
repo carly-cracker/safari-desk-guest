@@ -27,8 +27,8 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo - macOS Monterey style */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-              https://res-console.cloudinary.com/dir0qfbpu/thumbnails/v1/image/upload/v1754487823/Z3JuLTAxX2ZrZnRsYw==/drilldown
+            <div className="w-8 h-8 bg-gradient-to-br from-white-500 to-white-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+              <img src="https://res-console.cloudinary.com/dir0qfbpu/thumbnails/v1/image/upload/v1754487823/Z3JuLTAxX2ZrZnRsYw==/drilldown" alt="" />
             </div>
             <span className="font-semibold text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
               SafariDesk
