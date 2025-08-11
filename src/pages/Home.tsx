@@ -87,6 +87,31 @@ const faqs: FAQ[] = [
     },
   ];
 
+const userFeedback =[
+  {
+    name: "John Doe",
+    logo: "https://i.pinimg.com/736x/be/97/3c/be973ce5e13f8d4cf838dfce9ffa3f76.jpg",
+    feedback: "I love the fact that I can use the same ticketing system for all my teams. It's so easy to use and I can't wait to start using it.",
+    rating: 5,
+    ranks:"project manager"
+  },
+  {
+    name: "Jane Smith",
+    logo: "https://i.pinimg.com/736x/15/29/17/1529175815c82c2e9d6131c6d3d3b76a.jpg",
+    feedback: "I've been using SafariDesk for a few months now and it's been a game changer for my team. The automation features are fantastic!",
+    rating:5,
+    ranks:"team lead"
+  },
+  {
+    name: "Carl",
+    logo: "https://i.pinimg.com/1200x/a1/8d/83/a18d8397d10d061b49e39118334a5a1a.jpg",
+    feedback: "I've been using SafariDesk for a few months now and it's been a game changer for my team. The automation features are fantastic!",
+    rating:5,
+    ranks:"DevOps scrum master"
+  }
+
+]
+
 const integrationLogos= [
   "https://i.pinimg.com/1200x/73/0b/95/730b955fb6084375384a1d43c5eb2469.jpg", 
   "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
@@ -215,7 +240,7 @@ const Home = () => {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-4 bg-muted/20">
+      <section className="py-5 px-4 bg-muted/20">
         <div className="container mx-auto">
           <div>
             <h4 className="text-center text-orange-400 text-2xl font-bold mb-4 font-pacifico">Features !</h4>
@@ -229,6 +254,7 @@ const Home = () => {
             <Card className="p-6 bg-purple-100 animate-bounce-in">
               <CardContent className="p-0">
                 <h3 className="font-semibold mb-2">Smart Ticketing System</h3>
+                <img src="https://i.pinimg.com/1200x/86/41/b7/8641b77f52b41bae24318c9ae270aa28.jpg" alt="" />
                 <p>Centralize all customer communications from multiple channels into organized, trackable tickets with intelligent routing and prioritization.</p>
                 <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
                   <li>Automatic ticket creation from email, chat, phone, social media.</li>
@@ -243,6 +269,7 @@ const Home = () => {
             <Card className="p-6 bg-yellow-100 animate-bounce-in delay-100">
               <CardContent className="p-0">
                 <h3 className="font-semibold mb-2">SLA Mnanagement</h3>
+                <img src="https://i.pinimg.com/736x/6b/bc/19/6bbc19c640f9d3d826c81c7dc9b489ed.jpg" alt="" />
                 <p>
                   Set and monitor service level agreements with automated escalations, compliance tracking, and performance metrics to ensure timely resolutions.</p>
                 <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
@@ -258,6 +285,7 @@ const Home = () => {
             <Card className="p-6 bg-green-100 animate-bounce-in delay-200">
               <CardContent className="p-0">
                 <h3 className="font-semibold mb-2">Knowledge Management</h3>
+                <img src="https://i.pinimg.com/736x/ff/3f/65/ff3f65fbb3cd4db64278889d38a5c814.jpg" alt="" />
                 <p>
                   Build comprehensive knowledge bases with AI-powered article suggestions, self-service portals, and searchable documentation for faster resolutions.
                 </p>
@@ -276,19 +304,19 @@ const Home = () => {
       </section>
 
       {/* Complete view of your team's progress */}
-      <section className="py-20 px-4">
+      <section className="px-4">
         <div className="container mx-auto">
           <div>
             <h4 className="text-center text-orange-400 text-2xl font-bold mb-4 font-pacifico">Analytics !</h4>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-green-50 rounded-lg p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-green-50 rounded-lg p-8 min-h-[450px]">
             
             {/* Left Side - Text */}
-            <div>
+            <div className="flex flex-col justify-center h-full" >
               <h2 className="text-3xl font-bold mb-4">
                 Advanced analytics tools to keep you in control & customizable
               </h2>
-              <p className="text-sm text-muted-foreground mb-8">
+              <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
                 Go beyond raw numbers with a fully customizable analytics dashboard 
                 that puts you in control. Effortlessly track agent performance, ticket trends 
                 and customer satisfaction to drive impactful improvements and tell support success stories.
@@ -300,12 +328,12 @@ const Home = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex justify-center"
+              className="flex justify-center h-full"
             >
               <img
                 src="https://i.ibb.co/90YW0Hb/analyticdash.png"
                 alt="Analytics Dashboard"
-                className="rounded-lg shadow-lg w-full max-w-md object-cover"
+                className="rounded-lg shadow-lg w-full max-h-[400px]object-cover"
               />
             </motion.div>
 
@@ -325,23 +353,24 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
+            {userFeedback.map((feedback, i) => (
               <Card key={i} className="p-6 bg-slate-900 text-white">
                 <CardContent className="p-0">
                   <div className="flex mb-2">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <span key={star} className="text-yellow-400">★</span>
+                    {[...Array(feedback.rating)].map((_, idx) => (
+                      <span key={idx} className="text-yellow-400">★</span>
                     ))}
                   </div>
                   <p className="text-sm mb-4">
-                    "SafariDesk has transformed how our team collaborates and 
-                    manages projects. It's intuitive and very flexible."
+                    "{feedback.feedback}"
                   </p>
                   <div className="flex items-center">
-                    <div className="w-8 h-8 bg-gray-600 rounded-full mr-3"></div>
+                    <div className="w-8 h-8 bg-gray-600 rounded-full mr-3">
+                      <img src={feedback.logo} alt={feedback.name} className="w-8 h-8 rounded-full mr-3 object-cover" />
+                    </div>
                     <div>
-                      <p className="font-semibold text-sm">Sarah Johnson</p>
-                      <p className="text-xs text-gray-400">Project Manager</p>
+                      <p className="font-semibold text-sm">{feedback.name}</p>
+                      <p className="text-xs text-gray-400">{feedback.ranks}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -352,7 +381,7 @@ const Home = () => {
       </section>
 
       {/* Trusted by leading companies */}
-      <section className="py-20 px-4">
+      <section className="py-5 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-2xl font-bold mb-8">Trusted by leading companies</h2>
 
@@ -404,7 +433,7 @@ const Home = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4">
+      <section className="py-5 px-4">
       <div className="container mx-auto max-w-2xl">
         <div>
             <h4 className="text-center text-orange-400 text-2xl font-bold mb-4 font-pacifico">FAQs !</h4>

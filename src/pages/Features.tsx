@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/layout/Header";
+import { Link } from "react-router-dom";
 import Footer from "@/components/layout/Footer";
 
 const Features = () => {
@@ -20,7 +21,9 @@ const Features = () => {
             Streamline your workflow, manage projects, and empower your team with 
             SafariDesk the all-in-one task management solution.
           </p>
-          <Button size="lg">Start today</Button>
+          <Button size="lg">
+            <Link to="/signup">Start today</Link>
+          </Button>
         </div>
       </section>
 

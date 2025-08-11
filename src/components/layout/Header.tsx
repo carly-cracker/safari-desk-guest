@@ -99,7 +99,7 @@ const Header = () => {
               className="text-gray-700 hover:text-gray-900 hover:bg-white/30 rounded-xl backdrop-blur-sm transition-all duration-300 hover:scale-105" 
               asChild
             >
-              <Link to="/login">Sign In</Link>
+              <Link to="/signup">Sign In</Link>
             </Button>
             <Button 
               size="sm" 
