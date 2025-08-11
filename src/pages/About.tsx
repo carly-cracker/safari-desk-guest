@@ -9,7 +9,8 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"
+      style={{ marginTop: "80px" }}>
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl font-bold mb-6">About our company</h1>
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">

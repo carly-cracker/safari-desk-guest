@@ -230,7 +230,8 @@ export default function Changelog() {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-16">
+        <section className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-16"
+        style={{ marginTop: "40px" }}>
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
